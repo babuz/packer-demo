@@ -7,8 +7,11 @@ public class PackageAlogrithem {
     public static void main(String[] args) throws Exception {
 
         //75 : (1,85.31,€29) (2,14.55,€74) (3,3.98,€16) (4,26.24,€55)
-
         //(5,63.69,€52) (6,76.25,€75) (7,60.02,€74) (8,93.18,€35) (9,89.95,€78)
+
+        //75 : (1,85.31,29) (2,14.55,74) (3,3.98,16) (4,26.24,55) (5,63.69,52) (6,76.25,75) (7,60.02,74) (8,93.18,35) (9,89.95,78)
+
+
         int cost[] = {29, 74, 16, 55,52,75,74,35,78};
         //int cost[] = {16, 74,55,74,52,75,29,78, 35};
 
@@ -21,6 +24,42 @@ public class PackageAlogrithem {
         System.out.println(execute(cost, weights, packsize));
     }
 
+    public static void execute(PackageEntity packageEntity){
+        Integer maxWeight = packageEntity.getMaxWeight();
+        int numberOfItems = packageEntity.getPackageItems().size();
+
+        int[][] matrix = new int[numberOfItems+1][maxWeight+1];
+
+        for(int col=0; col <= maxWeight; col++){
+            matrix[0][col] = 0;
+        }
+
+        for(int row=0; row <= numberOfItems; row++){
+            matrix[row][0] = 0;
+        }
+
+        for(int item=1; item <= numberOfItems;item++){
+            for(int weight=1; weight<= maxWeight; weight++){
+                if(packageEntity.getPackageItems().get(item-1).getWeight()  <= weight){
+                    matrix[item][weight]=Math.max (packageEntity.getPackageItems().get(item-1).getCost()
+                                                                                                    +matrix[item-1][ (int) Math.round (weight- packageEntity.getPackageItems().get(item-1).getWeight())], matrix[item-1][weight]);
+                }
+                else
+                {
+                    matrix[item][weight]=matrix[item-1][weight];
+                }
+            }
+        }
+
+        //Printing the matrix
+        for (int[] rows : matrix) {
+
+            for (int col : rows) {
+                System.out.format("%5d", col);
+            }
+            System.out.println();
+        }
+    }
 
     public static int execute(int cost[], double weights[], int packSize) {
         //Get the total number of items.
