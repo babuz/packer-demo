@@ -1,5 +1,9 @@
 package com.packer;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.IntStream;
+
 public class PackageAlogrithem {
     public  static  class  product {
 
@@ -41,8 +45,9 @@ public class PackageAlogrithem {
         for(int item=1; item <= numberOfItems;item++){
             for(int weight=1; weight<= maxWeight; weight++){
                 if(packageEntity.getPackageItems().get(item-1).getWeight()  <= weight){
-                    matrix[item][weight]=Math.max (packageEntity.getPackageItems().get(item-1).getCost()
-                                                                                                    +matrix[item-1][ (int) Math.round (weight- packageEntity.getPackageItems().get(item-1).getWeight())], matrix[item-1][weight]);
+                    matrix[item][weight] = Math.max (packageEntity.getPackageItems().get(item-1).getCost()
+                                                                                                    +matrix[item-1][ (int) Math.round (weight- packageEntity.getPackageItems().get(item-1).getWeight())],
+                                                                                                    matrix[item-1][weight]);
                 }
                 else
                 {
@@ -50,6 +55,7 @@ public class PackageAlogrithem {
                 }
             }
         }
+
 
         //Printing the matrix
         for (int[] rows : matrix) {
@@ -59,6 +65,28 @@ public class PackageAlogrithem {
             }
             System.out.println();
         }
+
+        Integer  maxCost = matrix[numberOfItems][maxWeight];
+        System.out.println("Maximum Cost : " +  maxCost);
+        //Printing the matrix
+        List<Integer> itemNumber = new ArrayList<>();
+
+        boolean itemFind = false;
+
+        for(int row=numberOfItems; row>0; row--){
+            for(int col=1;col<= maxWeight && !itemFind; col++){
+                if( matrix[row-1][col] == maxCost){
+                    itemFind = true;
+                }
+            }
+            if(!itemFind && (maxCost - packageEntity.getPackageItems().get(row).getCost()) != 0){
+                itemNumber.add(packageEntity.getPackageItems().get(row).getItemNumber());
+                maxCost = maxCost - packageEntity.getPackageItems().get(row).getCost();
+            }
+            itemFind  =false;
+        }
+
+        itemNumber.forEach(System.out::println);
     }
 
     public static int execute(int cost[], double weights[], int packSize) {

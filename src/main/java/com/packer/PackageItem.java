@@ -1,7 +1,6 @@
 package com.packer;
 
 public class PackageItem {
-    private Double costPercentage;
     private  Double weight;
     private  Integer cost;
     private  int itemNumber;
@@ -10,11 +9,6 @@ public class PackageItem {
         this.weight = weight;
         this.cost = cost;
         this.itemNumber = itemNumber;
-        this.costPercentage = cost/weight;
-    }
-
-    public Double getCostPercentage() {
-        return costPercentage;
     }
 
     public Double getWeight() {
