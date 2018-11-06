@@ -1,6 +1,6 @@
 package com.packer;
 
-public class TestPoc {
+public class PackageAlogrithem {
     public  static  class  product {
 
     }
@@ -18,12 +18,11 @@ public class TestPoc {
 
         int packsize = 75;
 
-        System.out.println(knapsack(cost, weights, packsize));
-
+        System.out.println(execute(cost, weights, packsize));
     }
 
 
-    public static int knapsack(int cost[], double weights[], int packSize) {
+    public static int execute(int cost[], double weights[], int packSize) {
         //Get the total number of items.
         //Could be weights.length or cost.length. Doesn't matter
 
