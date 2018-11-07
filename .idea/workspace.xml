@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a895a0d-ac1b-4386-b34a-fff997e85c98" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/packer/Util/PackageValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestDataUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestPackageValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/packer/Packer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/packer/Packer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/TestPackerUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packer/AlgorithmFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packer/Algorithm/AlgorithmFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packer/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packer/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packer/PackageAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packer/Algorithm/PackageAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packer/PackageEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packer/Domain/PackageEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packer/PackageEntityTranslator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packer/Util/PackageEntityTranslator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packer/PackageItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packer/Domain/PackageItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/packer/Packer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packer/Packer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packer/PackerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packer/Util/PackerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/packer/PackingAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/packer/Algorithm/PackingAlgorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestPackerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestPackageEntityTranslator.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -47,40 +62,40 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gradle" value="2" />
-          <entry key="java" value="22" />
+          <entry key="java" value="41" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="2" />
-          <entry key="JAVA" value="22" />
+          <entry key="JAVA" value="41" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="32" />
+          <entry key="dummy" value="59" />
           <entry key="gradle" value="16" />
-          <entry key="java" value="10276" />
+          <entry key="java" value="12463" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="16" />
-          <entry key="JAVA" value="10276" />
-          <entry key="PLAIN_TEXT" value="32" />
+          <entry key="JAVA" value="12463" />
+          <entry key="PLAIN_TEXT" value="59" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Packer.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Util/PackageEntityTranslator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="-141">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,10 +104,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/function/Consumer.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Util/PackageValidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+            <state relative-caret-position="482">
+              <caret line="36" column="69" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Util/PackerUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="7" column="44" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,8 +130,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="252">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Packer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,81 +152,56 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/AlgorithmFactory.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Algorithm/AlgorithmFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+            <state relative-caret-position="54">
+              <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/PackageEntityTranslator.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Domain/PackageEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="72">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/exception/ApiException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#103#104#0" expanded="true" />
+                <element signature="e#126#127#0" expanded="true" />
+                <element signature="e#169#170#0" expanded="true" />
+                <element signature="e#199#200#0" expanded="true" />
+                <element signature="e#259#260#0" expanded="true" />
+                <element signature="e#296#297#0" expanded="true" />
+                <element signature="e#340#341#0" expanded="true" />
+                <element signature="e#368#369#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/PackageAlgorithm.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Domain/PackageItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="114" column="5" lean-forward="true" selection-start-line="69" selection-start-column="3" selection-end-line="114" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="36">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/PackerUtil.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Algorithm/PackageAlgorithm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/PackingAlgorithm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/PackageItem.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-              <folding>
-                <element signature="e#486#487#0" expanded="true" />
-                <element signature="e#515#516#0" expanded="true" />
-                <element signature="e#547#548#0" expanded="true" />
-                <element signature="e#574#575#0" expanded="true" />
-                <element signature="e#608#609#0" expanded="true" />
-                <element signature="e#641#642#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestPackerUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="89" column="59" lean-forward="true" selection-start-line="89" selection-start-column="59" selection-end-line="89" selection-end-column="59" />
+            <state relative-caret-position="205">
+              <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -514,20 +531,29 @@
         <option value="$PROJECT_DIR$/src/main/java/com/packer/PackerUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/packer/TestPoc.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/packer/PackageEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/packer/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/packer/PackageAlogrithem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/packer/PackageItem.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/test/java/TestPackerUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/packer/PackingAlgorithm.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/packer/AlgorithmFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/packer/PackageEntityTranslator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/packer/PackageAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packer/Domain/PackageEntityTranslator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packer/Main.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPackageEntityTranslator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packer/Util/PackageValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packer/Util/PackerUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packer/Util/PackageEntityTranslator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packer/Algorithm/AlgorithmFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/packer/Algorithm/PackageAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPackerUtil.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestDataUtil.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestPackageValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/packer/Packer.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-310" />
     <option name="y" value="225" />
     <option name="width" value="1750" />
@@ -576,6 +602,15 @@
               <item name="packer-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="packer-demo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="packer" type="462c0819:PsiDirectoryNode" />
+              <item name="Util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="packer-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="packer-demo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -595,7 +630,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541584603375" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541596005420" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -614,74 +649,69 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.packer.Main" />
-      <module name="packer-demo_main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.packer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="JUnit.TestPackageValidator">
+    <configuration name="TestPackageValidator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="packer-demo_test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestPackageValidator" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPackerUtil.shouldGetValidPackageItems" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestPackageValidator.shouldThrowExceptionForExceedCost" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="packer-demo_test" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestPackerUtil" />
-      <option name="METHOD_NAME" value="shouldGetValidPackageItems" />
+      <option name="MAIN_CLASS_NAME" value="TestPackageValidator" />
+      <option name="METHOD_NAME" value="shouldThrowExceptionForExceedCost" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPackerUtil.shouldGetValidRecords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestPackageValidator.shouldThrowExceptionForExceedWeight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="packer-demo_test" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestPackerUtil" />
-      <option name="METHOD_NAME" value="shouldGetValidRecords" />
+      <option name="MAIN_CLASS_NAME" value="TestPackageValidator" />
+      <option name="METHOD_NAME" value="shouldThrowExceptionForExceedWeight" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPackerUtil.shouldRunSuccessfullyGetValidPackageItems" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestPackageValidator.shouldThrowExceptionForInvalidMaxWeight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="packer-demo_test" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestPackerUtil" />
-      <option name="METHOD_NAME" value="shouldRunSuccessfullyGetValidPackageItems" />
+      <option name="MAIN_CLASS_NAME" value="TestPackageValidator" />
+      <option name="METHOD_NAME" value="shouldThrowExceptionForInvalidMaxWeight" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPackerUtil.shouldThrowExceptionForInvalidMaxWeightData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestPackageValidator.shouldThrowExceptionForMorePackageItems" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="packer-demo_test" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestPackerUtil" />
-      <option name="METHOD_NAME" value="shouldThrowExceptionForInvalidMaxWeightData" />
+      <option name="MAIN_CLASS_NAME" value="TestPackageValidator" />
+      <option name="METHOD_NAME" value="shouldThrowExceptionForMorePackageItems" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestPackerUtil.shouldThrowExceptionForInvalidMaxWeightData" />
-      <item itemvalue="JUnit.TestPackerUtil.shouldGetValidRecords" />
-      <item itemvalue="JUnit.TestPackerUtil.shouldGetValidPackageItems" />
-      <item itemvalue="JUnit.TestPackerUtil.shouldRunSuccessfullyGetValidPackageItems" />
-      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.TestPackageValidator.shouldThrowExceptionForInvalidMaxWeight" />
+      <item itemvalue="JUnit.TestPackageValidator.shouldThrowExceptionForMorePackageItems" />
+      <item itemvalue="JUnit.TestPackageValidator.shouldThrowExceptionForExceedCost" />
+      <item itemvalue="JUnit.TestPackageValidator.shouldThrowExceptionForExceedWeight" />
+      <item itemvalue="JUnit.TestPackageValidator" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.TestPackerUtil.shouldRunSuccessfullyGetValidPackageItems" />
-        <item itemvalue="JUnit.TestPackerUtil.shouldGetValidPackageItems" />
-        <item itemvalue="JUnit.TestPackerUtil.shouldGetValidRecords" />
-        <item itemvalue="JUnit.TestPackerUtil.shouldThrowExceptionForInvalidMaxWeightData" />
+        <item itemvalue="JUnit.TestPackageValidator" />
+        <item itemvalue="JUnit.TestPackageValidator.shouldThrowExceptionForExceedWeight" />
+        <item itemvalue="JUnit.TestPackageValidator.shouldThrowExceptionForExceedCost" />
+        <item itemvalue="JUnit.TestPackageValidator.shouldThrowExceptionForMorePackageItems" />
+        <item itemvalue="JUnit.TestPackageValidator.shouldThrowExceptionForInvalidMaxWeight" />
       </list>
     </recent_temporary>
   </component>
@@ -699,35 +729,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestPackerUtil_shouldRunSuccessfullyGetValidPackageItems - 2018.11.07 at 09h 43m 13s.xml">
-      <configuration name="TestPackerUtil.shouldRunSuccessfullyGetValidPackageItems" configurationId="JUnit" />
+    <history-entry file="TestPackageEntityTranslator - 2018.11.07 at 12h 56m 28s.xml">
+      <configuration name="TestPackageEntityTranslator" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestPackerUtil_shouldRunSuccessfullyGetValidPackageItems - 2018.11.07 at 09h 44m 55s.xml">
-      <configuration name="TestPackerUtil.shouldRunSuccessfullyGetValidPackageItems" configurationId="JUnit" />
+    <history-entry file="TestPackageValidator_shouldThrowExceptionForInvalidData - 2018.11.07 at 12h 59m 24s.xml">
+      <configuration name="TestPackageValidator.shouldThrowExceptionForInvalidData" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestPackerUtil_shouldRunSuccessfullyGetValidPackageItems - 2018.11.07 at 09h 49m 38s.xml">
-      <configuration name="TestPackerUtil.shouldRunSuccessfullyGetValidPackageItems" configurationId="JUnit" />
+    <history-entry file="TestPackageValidator_shouldThrowExceptionForInvalidMaxWeight - 2018.11.07 at 13h 02m 15s.xml">
+      <configuration name="TestPackageValidator.shouldThrowExceptionForInvalidMaxWeight" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestPackerUtil_shouldRunSuccessfullyGetValidPackageItems - 2018.11.07 at 09h 56m 44s.xml">
-      <configuration name="TestPackerUtil.shouldRunSuccessfullyGetValidPackageItems" configurationId="JUnit" />
+    <history-entry file="TestPackageValidator_shouldThrowExceptionForInvalidMaxWeight - 2018.11.07 at 13h 02m 47s.xml">
+      <configuration name="TestPackageValidator.shouldThrowExceptionForInvalidMaxWeight" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestPackerUtil_shouldRunSuccessfullyGetValidPackageItems - 2018.11.07 at 09h 57m 01s.xml">
-      <configuration name="TestPackerUtil.shouldRunSuccessfullyGetValidPackageItems" configurationId="JUnit" />
+    <history-entry file="TestPackageValidator_shouldThrowExceptionForMorePackageItems - 2018.11.07 at 13h 04m 35s.xml">
+      <configuration name="TestPackageValidator.shouldThrowExceptionForMorePackageItems" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestPackerUtil_shouldRunSuccessfullyGetValidPackageItems - 2018.11.07 at 09h 57m 14s.xml">
-      <configuration name="TestPackerUtil.shouldRunSuccessfullyGetValidPackageItems" configurationId="JUnit" />
+    <history-entry file="TestPackageValidator_shouldThrowExceptionForExceedCost - 2018.11.07 at 13h 06m 03s.xml">
+      <configuration name="TestPackageValidator.shouldThrowExceptionForExceedCost" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestPackerUtil_shouldRunSuccessfullyGetValidPackageItems - 2018.11.07 at 09h 59m 35s.xml">
-      <configuration name="TestPackerUtil.shouldRunSuccessfullyGetValidPackageItems" configurationId="JUnit" />
+    <history-entry file="TestPackageValidator_shouldThrowExceptionForExceedCost - 2018.11.07 at 13h 06m 23s.xml">
+      <configuration name="TestPackageValidator.shouldThrowExceptionForExceedCost" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestPackerUtil_shouldRunSuccessfullyGetValidPackageItems - 2018.11.07 at 09h 59m 48s.xml">
-      <configuration name="TestPackerUtil.shouldRunSuccessfullyGetValidPackageItems" configurationId="JUnit" />
+    <history-entry file="TestPackageValidator_shouldThrowExceptionForExceedWeight - 2018.11.07 at 13h 07m 49s.xml">
+      <configuration name="TestPackageValidator.shouldThrowExceptionForExceedWeight" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestPackerUtil_shouldRunSuccessfullyGetValidPackageItems - 2018.11.07 at 10h 00m 01s.xml">
-      <configuration name="TestPackerUtil.shouldRunSuccessfullyGetValidPackageItems" configurationId="JUnit" />
+    <history-entry file="TestPackageValidator_shouldThrowExceptionForExceedWeight - 2018.11.07 at 13h 08m 06s.xml">
+      <configuration name="TestPackageValidator.shouldThrowExceptionForExceedWeight" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestPackerUtil_shouldRunSuccessfullyGetValidPackageItems - 2018.11.07 at 10h 00m 57s.xml">
-      <configuration name="TestPackerUtil.shouldRunSuccessfullyGetValidPackageItems" configurationId="JUnit" />
+    <history-entry file="TestPackageValidator - 2018.11.07 at 13h 10m 03s.xml">
+      <configuration name="TestPackageValidator" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -739,7 +769,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23959732" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23959732" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" weight="0.32907802" />
@@ -768,18 +798,6 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/packer/Packer.java</url>
-          <line>32</line>
-          <properties />
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/nio/file/Paths.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -796,23 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="764" column="26" selection-start-line="764" selection-start-column="26" selection-end-line="764" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/exception/ApiException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="e#103#104#0" expanded="true" />
-            <element signature="e#126#127#0" expanded="true" />
-            <element signature="e#169#170#0" expanded="true" />
-            <element signature="e#199#200#0" expanded="true" />
-            <element signature="e#259#260#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -837,65 +838,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/PackageEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#348#349#0" expanded="true" />
-            <element signature="e#380#381#0" expanded="true" />
-            <element signature="e#430#431#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestPackerUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="89" column="59" lean-forward="true" selection-start-line="89" selection-start-column="59" selection-end-line="89" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/AlgorithmFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/PackageItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding>
-            <element signature="e#486#487#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -909,37 +855,135 @@
     <entry file="file://$PROJECT_DIR$/inputs.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/PackingAlgorithm.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPackageEntityTranslator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/PackageAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="114" column="5" lean-forward="true" selection-start-line="69" selection-start-column="3" selection-end-line="114" selection-end-column="5" />
+        <state relative-caret-position="359">
+          <caret line="84" column="3" selection-start-line="84" selection-start-column="3" selection-end-line="93" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/PackerUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPackerUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestDataUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/PackageEntityTranslator.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestPackageValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="432">
+          <caret line="35" column="72" selection-start-line="35" selection-start-column="72" selection-end-line="35" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Algorithm/PackingAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Algorithm/PackageAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Algorithm/AlgorithmFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="57" selection-start-line="3" selection-start-column="57" selection-end-line="3" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Domain/PackageItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Domain/PackageEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/exception/ApiException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="e#103#104#0" expanded="true" />
+            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#169#170#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Util/PackageEntityTranslator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-141">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Util/PackageValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="36" column="69" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Util/PackerUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -948,8 +992,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/packer/Packer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="333">
+          <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,4 +1,7 @@
-package com.packer;
+package com.packer.Algorithm;
+
+import com.packer.Domain.PackageEntity;
+import com.packer.Domain.PackageItem;
 
 import java.util.List;
 

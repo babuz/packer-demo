@@ -1,39 +1,45 @@
-package com.packer;
+package com.packer.Algorithm;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import com.packer.Domain.PackageEntity;
+import com.packer.Domain.PackageItem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class PackageAlgorithm implements PackingAlgorithm {
     private static final Logger log = LoggerFactory.getLogger(PackageAlgorithm.class);
 
-    public static void main(String[] args) throws Exception {
-
-        //75 : (1,85.31,€29) (2,14.55,€74) (3,3.98,€16) (4,26.24,€55)
-        //(5,63.69,€52) (6,76.25,€75) (7,60.02,€74) (8,93.18,€35) (9,89.95,€78)
-
-        //75 : (1,85.31,29) (2,14.55,74) (3,3.98,16) (4,26.24,55) (5,63.69,52) (6,76.25,75) (7,60.02,74) (8,93.18,35) (9,89.95,78)
-
-
-        int cost[] = {29, 74, 16, 55,52,75,74,35,78};
-        //int cost[] = {16, 74,55,74,52,75,29,78, 35};
-
-        //double weights[] = {5.0, 4.0, 6.0, 3.0};
-        //double weights[] = {3.98, 14.55,  26.24,60.02,63.69,76.25,85.31,89.95,93.18};
-        double weights[] = {85.31, 14.55, 3.98, 26.24,63.69,76.25,60.02,93.18,89.95};
-
-        int packsize = 75;
-
-    }
-
     public List<PackageItem> execute(PackageEntity packageEntity){
         Integer maxWeight = packageEntity.getMaxWeight();
         int numberOfItems = packageEntity.getPackageItems().size();
 
-        int[][] matrix = new int[numberOfItems+1][maxWeight+1];
+        int[][] valueMatrix = new int[numberOfItems+1][maxWeight+1];
 
+        fillValueMatrixWithDefaultValue(maxWeight, numberOfItems, valueMatrix);
+
+        for(int item=1; item <= numberOfItems;item++){
+            for(int weight=1; weight<= maxWeight; weight++){
+                //current Item weight less that running weight
+                if(packageEntity.getPackageItems().get(item-1).getWeight()  <= weight){
+
+                    valueMatrix[item][weight] = Math.max (packageEntity.getPackageItems().get(item-1).getCost()
+                                                                                                    +valueMatrix[item-1][ (int) Math.round (weight- packageEntity.getPackageItems().get(item-1).getWeight())],
+                                                                                                    valueMatrix[item-1][weight]);
+                }
+                else
+                {
+                    //current item weight more that existing just carry forward them
+                    valueMatrix[item][weight]=valueMatrix[item-1][weight];
+                }
+            }
+        }
+        return getMaximumProfit(packageEntity,  numberOfItems, valueMatrix);
+    }
+
+    private void fillValueMatrixWithDefaultValue(Integer maxWeight, int numberOfItems, int[][] matrix) {
         for(int col=0; col <= maxWeight; col++){
             matrix[0][col] = 0;
         }
@@ -41,41 +47,24 @@ public class PackageAlgorithm implements PackingAlgorithm {
         for(int row=0; row <= numberOfItems; row++){
             matrix[row][0] = 0;
         }
-
-        for(int item=1; item <= numberOfItems;item++){
-            for(int weight=1; weight<= maxWeight; weight++){
-                if(packageEntity.getPackageItems().get(item-1).getWeight()  <= weight){
-                    matrix[item][weight] = Math.max (packageEntity.getPackageItems().get(item-1).getCost()
-                                                                                                    +matrix[item-1][ (int) Math.round (weight- packageEntity.getPackageItems().get(item-1).getWeight())],
-                                                                                                    matrix[item-1][weight]);
-                }
-                else
-                {
-                    matrix[item][weight]=matrix[item-1][weight];
-                }
-            }
-        }
-        /*//Printing the matrix
-        for (int[] rows : matrix) {
-
-            for (int col : rows) {
-                System.out.format("%5d", col);
-            }
-            System.out.println();
-        }*/
-
-        return getMaximumProfit(packageEntity, maxWeight, numberOfItems, matrix);
     }
 
-    private static List<PackageItem> getMaximumProfit(PackageEntity packageEntity, Integer maxWeight, int numberOfItems, int[][] matrix) {
-        Integer  maxCost = matrix[numberOfItems][maxWeight];
+    /***
+     * This method will  sequence method to collect the max profitable item from the list
+     * @param packageEntity : this contains the packaged entity list with maximum weight
+     * @param numberOfItems
+     * @param matrix
+     * @return
+     */
+    private static List<PackageItem> getMaximumProfit(PackageEntity packageEntity, int numberOfItems, int[][] matrix) {
+        Integer  maxCost = matrix[numberOfItems][packageEntity.getMaxWeight()];
 
         List<Integer> itemNumber = new ArrayList<>();
 
         boolean itemFind = false;
 
         for(int row=numberOfItems; row>0; row--){
-            for(int col=1;col<= maxWeight && !itemFind; col++){
+            for(int col=1;col<= packageEntity.getMaxWeight()&& !itemFind; col++){
                 if( matrix[row-1][col] == maxCost){
                     itemFind = true;
                 }
@@ -90,6 +79,12 @@ public class PackageAlgorithm implements PackingAlgorithm {
         return findMaxProfitAndLessWeight(itemNumber, packageEntity.getPackageItems());
     }
 
+    /***
+     * This method will get  suitable and matching records which has less weight and max cost if there is any duplications
+     * @param selectedItem : selected item numbers
+     *  @param packageItems : the whole packaged items
+     * @return return best package items list
+     */
     private static  List<PackageItem> findMaxProfitAndLessWeight(List<Integer> selectedItem, List<PackageItem> packageItems){
        List<PackageItem> choosenItems =   packageItems.stream().filter(  item -> selectedItem .contains(item.getItemNumber())).collect(Collectors.toList());
 

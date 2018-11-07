@@ -1,4 +1,4 @@
-package com.packer;
+package com.packer.Domain;
 
 import java.util.List;
 

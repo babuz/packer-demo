@@ -1,14 +1,17 @@
-package com.packer;
+package com.packer.Util;
+
+import com.packer.Domain.PackageEntity;
+import com.packer.Domain.PackageItem;
+import com.packer.exception.ApiException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-import static com.packer.PackerUtil.getRecordList;
+import static com.packer.Util.PackerUtil.getRecordList;
 
 public class PackageEntityTranslator {
 
-    private  static final Integer MAX_WEIGHT = 100;
-    private  static final Integer MIN_WEIGHT = 0;
     private static final int MAX_WEIGHT_POSITION = 0;
     private static final int RECORD_POSITION = 1;
     private static final  int ITEM_NUMBER_POSITION =0;
@@ -17,21 +20,27 @@ public class PackageEntityTranslator {
     private static final  String DATA_DELIMITER = ",";
     private static final  String MAX_WEIGHT_DATA_DELIMITER = ":";
 
-    public  static  PackageEntity translateToPackageEntities(String line){
-        //81 : (1,53.38,45) (2,88.62,98) (3,78.48,3) (4,72.30,76) (5,30.18,9) (6,46.34,48)
+    public  static PackageEntity translateToPackageEntities(String line) throws ApiException {
+        PackageValidator.isValidRecord(line);
+
         List<PackageItem> packageItems = new ArrayList<>();
 
-        PackerUtil.isValidRecord(line);
         String[] records = line.split(MAX_WEIGHT_DATA_DELIMITER );
         Integer maxWeight = Integer.valueOf(records[MAX_WEIGHT_POSITION].trim());
         String recordLine = records[RECORD_POSITION].trim();
+
         List<String> recordList = getRecordList(recordLine);
+
         recordList.forEach(record -> {
                     packageItems.add(createPackageItem(record));
                 }
         );
 
-        return new PackageEntity(maxWeight, packageItems);
+       List<PackageItem>  filterdPackageItems =  packageItems.stream().filter( item -> item.getWeight() <= maxWeight).collect(Collectors.toList());
+
+       PackageValidator.validate(maxWeight, filterdPackageItems);
+
+        return new PackageEntity(maxWeight, filterdPackageItems);
     }
 
     private static  PackageItem createPackageItem(String packageRecord){

@@ -1,4 +1,4 @@
-package com.packer;
+package com.packer.Domain;
 
 public class PackageItem {
     private  Double weight;
