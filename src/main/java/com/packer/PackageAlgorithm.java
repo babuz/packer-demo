@@ -2,12 +2,13 @@ package com.packer;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.IntStream;
+import java.util.stream.Collectors;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class PackageAlgorithm {
-    public  static  class  product {
+    private static final Logger log = LoggerFactory.getLogger(PackageAlgorithm.class);
 
-    }
     public static void main(String[] args) throws Exception {
 
         //75 : (1,85.31,€29) (2,14.55,€74) (3,3.98,€16) (4,26.24,€55)
@@ -97,24 +98,32 @@ public class PackageAlgorithm {
 
         findMaxProfitAndLessWeight(itemNumber, packageEntity.getPackageItems());
 
-        System.out.println("Return Value" + itemNumber);
         return  returnValue;
     }
 
-    private static  List<Integer> findMaxProfitAndLessWeight(List<Integer> selectedItem, List<PackageItem> packageItems){
-        Double maxWeight = 0d;
-        Integer maxProfit = 0;
-        for (Integer item : selectedItem ) {
-            maxWeight +=packageItems.get(item-1).getWeight();
-            maxProfit +=packageItems.get(item-1).getCost();
-            System.out.println(packageItems.get(item-1).getCost());
-            System.out.println(packageItems.get(item-1).getWeight());
-        }
+    private static  List<PackageItem> findMaxProfitAndLessWeight(List<Integer> selectedItem, List<PackageItem> packageItems){
+       List<PackageItem> choosenItems =   packageItems.stream().filter(  item -> selectedItem .contains(item.getItemNumber())).collect(Collectors.toList());
 
-        System.out.println("maxWeight - " + maxWeight);
-        System.out.println("maxProfit  - " + maxProfit);
+        List<PackageItem> bestItems = new ArrayList<>();
+        List<Integer> overWeightItem = new ArrayList<>();
 
+        choosenItems.forEach( item -> {
+                    packageItems.forEach( existingItem -> {
+                                if(existingItem.getCost() == item.getCost()
+                                        && existingItem.getWeight() < item.getWeight()
+                                        && !choosenItems.contains(existingItem)
+                                ){
+                                    overWeightItem.add(item.getItemNumber());
+                                    bestItems.add(existingItem);
+                                }
+                    });
+                }
+        );
 
-        return selectedItem;
+        choosenItems.removeIf( item -> overWeightItem.contains(item.getItemNumber()));
+        bestItems.addAll(choosenItems);
+        bestItems.forEach(item -> log.info(item.toString()));
+
+        return bestItems;
     }
 }

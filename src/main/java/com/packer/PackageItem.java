@@ -22,4 +22,13 @@ public class PackageItem {
     public int getItemNumber() {
         return itemNumber;
     }
+
+    @Override
+    public String toString() {
+        return "PackageItem{" +
+                "weight=" + weight +
+                ", cost=" + cost +
+                ", itemNumber=" + itemNumber +
+                '}';
+    }
 }
