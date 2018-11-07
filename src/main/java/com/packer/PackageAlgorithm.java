@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
 
-public class PackageAlogrithem {
+public class PackageAlgorithm {
     public  static  class  product {
 
     }
@@ -95,7 +95,26 @@ public class PackageAlogrithem {
             returnValue += itemNumber.get(i);
         }
 
+        findMaxProfitAndLessWeight(itemNumber, packageEntity.getPackageItems());
+
         System.out.println("Return Value" + itemNumber);
         return  returnValue;
+    }
+
+    private static  List<Integer> findMaxProfitAndLessWeight(List<Integer> selectedItem, List<PackageItem> packageItems){
+        Double maxWeight = 0d;
+        Integer maxProfit = 0;
+        for (Integer item : selectedItem ) {
+            maxWeight +=packageItems.get(item-1).getWeight();
+            maxProfit +=packageItems.get(item-1).getCost();
+            System.out.println(packageItems.get(item-1).getCost());
+            System.out.println(packageItems.get(item-1).getWeight());
+        }
+
+        System.out.println("maxWeight - " + maxWeight);
+        System.out.println("maxProfit  - " + maxProfit);
+
+
+        return selectedItem;
     }
 }
