@@ -37,8 +37,8 @@ public class PackageEntityTranslator {
     private static  PackageItem createPackageItem(String packageRecord){
 
         String[] arrayItem = packageRecord.split(DATA_DELIMITER );
-        return new PackageItem(Integer.parseInt(arrayItem[ITEM_NUMBER_POSITION]),
-                Double.parseDouble(arrayItem[WEIGHT_POSITION ]),
-                Integer.parseInt(arrayItem[COST_POSITION ]));
+        return new PackageItem(Integer.parseInt(arrayItem[ITEM_NUMBER_POSITION].trim()),
+                Double.parseDouble(arrayItem[WEIGHT_POSITION ].trim()),
+                Integer.parseInt(arrayItem[COST_POSITION ].trim()));
     }
 }

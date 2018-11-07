@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class PackageAlgorithm {
+public class PackageAlgorithm implements PackingAlgorithm {
     private static final Logger log = LoggerFactory.getLogger(PackageAlgorithm.class);
 
     public static void main(String[] args) throws Exception {
@@ -28,7 +28,7 @@ public class PackageAlgorithm {
 
     }
 
-    public static String execute(PackageEntity packageEntity){
+    public List<PackageItem> execute(PackageEntity packageEntity){
         Integer maxWeight = packageEntity.getMaxWeight();
         int numberOfItems = packageEntity.getPackageItems().size();
 
@@ -55,25 +55,21 @@ public class PackageAlgorithm {
                 }
             }
         }
-        //Printing the matrix
+        /*//Printing the matrix
         for (int[] rows : matrix) {
 
             for (int col : rows) {
                 System.out.format("%5d", col);
             }
             System.out.println();
-        }
+        }*/
 
         return getMaximumProfit(packageEntity, maxWeight, numberOfItems, matrix);
     }
 
-    private static String getMaximumProfit(PackageEntity packageEntity, Integer maxWeight, int numberOfItems, int[][] matrix) {
+    private static List<PackageItem> getMaximumProfit(PackageEntity packageEntity, Integer maxWeight, int numberOfItems, int[][] matrix) {
         Integer  maxCost = matrix[numberOfItems][maxWeight];
-        System.out.println("Maximum Cost : " +  maxCost);
-        System.out.println("Maximum Weight: " +  maxWeight);
-        System.out.println("Maximum Items: " +  numberOfItems);
 
-        //Printing the matrix
         List<Integer> itemNumber = new ArrayList<>();
 
         boolean itemFind = false;
@@ -91,14 +87,7 @@ public class PackageAlgorithm {
             itemFind  =false;
         }
 
-        String returnValue = "" ;
-        for (int i=0;i< itemNumber.size();i++){
-            returnValue += itemNumber.get(i);
-        }
-
-        findMaxProfitAndLessWeight(itemNumber, packageEntity.getPackageItems());
-
-        return  returnValue;
+        return findMaxProfitAndLessWeight(itemNumber, packageEntity.getPackageItems());
     }
 
     private static  List<PackageItem> findMaxProfitAndLessWeight(List<Integer> selectedItem, List<PackageItem> packageItems){
@@ -122,8 +111,6 @@ public class PackageAlgorithm {
 
         choosenItems.removeIf( item -> overWeightItem.contains(item.getItemNumber()));
         bestItems.addAll(choosenItems);
-        bestItems.forEach(item -> log.info(item.toString()));
-
         return bestItems;
     }
 }
