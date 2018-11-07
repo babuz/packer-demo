@@ -25,10 +25,9 @@ public class PackageAlogrithem {
 
         int packsize = 75;
 
-        System.out.println(execute(cost, weights, packsize));
     }
 
-    public static void execute(PackageEntity packageEntity){
+    public static String execute(PackageEntity packageEntity){
         Integer maxWeight = packageEntity.getMaxWeight();
         int numberOfItems = packageEntity.getPackageItems().size();
 
@@ -55,8 +54,6 @@ public class PackageAlogrithem {
                 }
             }
         }
-
-
         //Printing the matrix
         for (int[] rows : matrix) {
 
@@ -66,8 +63,15 @@ public class PackageAlogrithem {
             System.out.println();
         }
 
+        return getMaximumProfit(packageEntity, maxWeight, numberOfItems, matrix);
+    }
+
+    private static String getMaximumProfit(PackageEntity packageEntity, Integer maxWeight, int numberOfItems, int[][] matrix) {
         Integer  maxCost = matrix[numberOfItems][maxWeight];
         System.out.println("Maximum Cost : " +  maxCost);
+        System.out.println("Maximum Weight: " +  maxWeight);
+        System.out.println("Maximum Items: " +  numberOfItems);
+
         //Printing the matrix
         List<Integer> itemNumber = new ArrayList<>();
 
@@ -79,71 +83,19 @@ public class PackageAlogrithem {
                     itemFind = true;
                 }
             }
-            if(!itemFind && (maxCost - packageEntity.getPackageItems().get(row).getCost()) != 0){
-                itemNumber.add(packageEntity.getPackageItems().get(row).getItemNumber());
-                maxCost = maxCost - packageEntity.getPackageItems().get(row).getCost();
+            if(!itemFind && maxCost>0){
+                itemNumber.add(packageEntity.getPackageItems().get(row-1).getItemNumber());
+                maxCost = maxCost - packageEntity.getPackageItems().get(row-1).getCost();
             }
             itemFind  =false;
         }
 
-        itemNumber.forEach(System.out::println);
-    }
-
-    public static int execute(int cost[], double weights[], int packSize) {
-        //Get the total number of items.
-        //Could be weights.length or cost.length. Doesn't matter
-
-        int NumberOfItems = weights.length;
-        //Create a matrix.
-        //Items are in rows and weight at in columns +1 on each side
-
-        int[][] matrix = new int[NumberOfItems + 1][packSize + 1];
-
-        //What if the knapsack's capacity is 0 - Set
-        //all columns at row 0 to be 0
-
-        for (int col = 0; col <= packSize; col++) {
-            matrix[0][col] = 0;
+        String returnValue = "" ;
+        for (int i=0;i< itemNumber.size();i++){
+            returnValue += itemNumber.get(i);
         }
 
-        //What if there are no items at home.
-        //Fill the first row with 0
-        for (int row = 0; row <= NumberOfItems; row++) {
-            matrix[row][0] = 0;
-        }
-
-        for (int item=1;item<=NumberOfItems;item++){
-            //Let's fill the values row by row
-            for (int weight=1;weight<=packSize;weight++){
-                //Is the current items weight less
-                //than or equal to running weight
-
-                if (weights[item-1]<=weight){
-
-                    //Given a weight, check if the value of the current
-                    //item + value of the item that we could afford
-                    //with the remaining weight is greater than the value
-                    //without the current item itself
-
-                    matrix[item][weight]=Math.max (cost[item-1] +matrix[item-1][ (int) Math.round (weight-weights[item-1])], matrix[item-1][weight]);
-                }
-                else {
-                            //If the current item's weight is more than the
-                            //running weight, just carry forward the value
-                            //without the current item
-                        matrix[item][weight]=matrix[item-1][weight];
-                }
-            }
-        }
-
-        //Printing the matrix
-        for (int[] rows : matrix) {
-
-            for (int col : rows) {
-                System.out.format("%5d", col);
-            }
-            System.out.println();
-        }
-        return matrix[NumberOfItems][packSize];
+        System.out.println("Return Value" + itemNumber);
+        return  returnValue;
     }
 }
