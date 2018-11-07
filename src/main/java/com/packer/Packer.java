@@ -27,21 +27,23 @@ public class Packer {
                     .map(x ->  PackageEntityTranslator.translateToPackageEntities(x))
                     .collect(Collectors.toList());
 
-
             packageEntities.forEach( packageEntity -> {
                 List<PackageItem> bestItems =  AlgorithmFactory.getPackingAlogrithm().execute(packageEntity);
 
                 String output =  bestItems.stream()
                         .map( packageItem -> String.valueOf(packageItem.getItemNumber()))
                         .collect(Collectors.joining(","));
+
+                output=output.isEmpty() ?"-": output;
+
                 result.add(output);
 
             });
-            log.info(result.toString());
         } catch (Exception e) {
             throw new ApiException("Error processing file : " + absoluteFilePath, e);
         }
 
+        log.info(result.toString());
         return result;
     }
 }
